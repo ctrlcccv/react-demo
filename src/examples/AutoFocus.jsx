@@ -123,11 +123,6 @@ function AutoFocus() {
             aria-label="전화번호 뒷자리"
           />
         </div>
-        {phone1 && phone2 && phone3 && (
-          <div className={styles.result}>
-            입력된 전화번호: {phone1}-{phone2}-{phone3}
-          </div>
-        )}
       </div>
     </div>
   );

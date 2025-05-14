@@ -1,0 +1,66 @@
+/* BasicExample 모듈 스타일 */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #0066cc;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.content {
+  padding: 20px;
+  background-color: white;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+.sectionTitle {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 8px;
+}
+
+.description {
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.codeBlock {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: monospace;
+  border: 1px solid #eaeaea;
+  margin: 15px 0;
+}
+
+.navigation {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.navLink {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navLink:hover {
+  background-color: #0055aa;
+} 

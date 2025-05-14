@@ -1,11 +1,12 @@
+/* 글로벌 스타일 - 공통 스타일만 정의 */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #213547;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,13 +14,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -30,182 +28,84 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-.card {
-  padding: 2em;
-  border-radius: 8px;
-  background-color: #1a1a1a;
-  margin-bottom: 1.5rem;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.example-container {
-  width: 100%;
-  max-width: 800px;
+#root {
+  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.example-content {
-  background-color: #1a1a1a;
-  border-radius: 8px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  text-align: left;
+/* 앱 로고 스타일 */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
 }
 
-.navigation {
-  margin-top: 2rem;
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
 
-/* 카운터 예제 스타일 */
-.counter-demo {
-  margin: 2rem 0;
-  padding: 1.5rem;
-  background-color: #2a2a2a;
-  border-radius: 8px;
-  text-align: center;
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.counter-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+/* 카드 컨테이너 */
+.card {
+  padding: 2em;
 }
 
-.counter-button {
-  min-width: 100px;
+/* 링크 스타일 */
+a {
+  color: #646cff;
+  text-decoration: inherit;
 }
 
-.decrease {
-  background-color: #e74c3c;
+a:hover {
+  color: #535bf2;
+  text-decoration: underline;
 }
 
-.reset {
-  background-color: #3498db;
+/* 버튼 공통 스타일 */
+button {
+  cursor: pointer;
 }
 
-.increase {
-  background-color: #2ecc71;
-}
-
-/* 코드 표시 스타일 */
-pre {
-  background-color: #2c3e50;
-  padding: 1rem;
-  border-radius: 4px;
-  overflow-x: auto;
-  margin: 1rem 0;
-}
-
-/* 투두 리스트 스타일 */
-.todo-app {
-  margin-top: 2rem;
-}
-
-.todo-input {
-  display: flex;
-  margin-bottom: 1rem;
-}
-
-.todo-input input {
-  flex-grow: 1;
-  padding: 0.6em 1em;
-  border-radius: 8px 0 0 8px;
-  border: 1px solid #444;
-  background-color: #333;
-  color: white;
-}
-
-.todo-input button {
-  border-radius: 0 8px 8px 0;
-  background-color: #3498db;
-}
-
-.todo-list {
-  list-style: none;
+/* 기본 리스트 스타일 */
+ul {
+  list-style-type: none;
   padding: 0;
 }
 
-.todo-list li {
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-  border-bottom: 1px solid #444;
-  gap: 0.5rem;
+ul li {
+  margin: 10px 0;
 }
 
-.todo-list li.completed span {
-  text-decoration: line-through;
+/* 기본 텍스트 스타일 */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.read-the-docs {
   color: #888;
+  margin-top: 20px;
 }
 
-.todo-list li span {
-  flex-grow: 1;
-}
-
-.todo-list li button {
-  background-color: #e74c3c;
-  padding: 0.3em 0.6em;
-  font-size: 0.8em;
-}
-
-@media (prefers-color-scheme: light) {
+/* 다크 모드 대응 */
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
   }
-  a:hover {
+  a {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
+  a:hover {
+    color: #646cff;
   }
-  .card, .example-content {
-    background-color: #f1f1f1;
-  }
-  pre {
-    background-color: #eaeaea;
-    color: #333;
-  }
-  .counter-demo {
-    background-color: #e9e9e9;
-  }
-  .todo-input input {
-    background-color: white;
-    border-color: #ddd;
-    color: black;
-  }
-  .todo-list li {
-    border-bottom: 1px solid #ddd;
+  .read-the-docs {
+    color: #ccc;
   }
 }

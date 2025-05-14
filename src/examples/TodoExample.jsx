@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import styles from './TodoExample.module.css'
 
 function TodoExample() {
   const [todos, setTodos] = useState([
@@ -36,44 +37,54 @@ function TodoExample() {
   }
   
   return (
-    <div className="example-container">
-      <h1>할일 목록 예제</h1>
-      <div className="example-content">
-        <h2>React로 CRUD 기능 구현하기</h2>
-        <p>
+    <div className={styles.container}>
+      <h1 className={styles.title}>할일 목록 예제</h1>
+      <div className={styles.content}>
+        <h2 className={styles.sectionTitle}>React로 CRUD 기능 구현하기</h2>
+        <p className={styles.description}>
           이 예제는 할일 목록(Todo List)을 관리하는 간단한 CRUD 애플리케이션입니다.
           React의 상태 관리와 이벤트 처리를 이해하는데 도움이 됩니다.
         </p>
         
-        <div className="todo-app">
-          <div className="todo-input">
+        <div className={styles.todoApp}>
+          <div className={styles.todoInput}>
             <input
               type="text"
               value={newTodo}
               onChange={(e) => setNewTodo(e.target.value)}
               placeholder="할 일을 입력하세요"
               onKeyPress={(e) => e.key === 'Enter' && addTodo()}
+              className={styles.inputField}
             />
-            <button onClick={addTodo}>추가</button>
+            <button onClick={addTodo} className={styles.addButton}>추가</button>
           </div>
           
-          <ul className="todo-list">
+          <ul className={styles.todoList}>
             {todos.map(todo => (
-              <li key={todo.id} className={todo.completed ? 'completed' : ''}>
+              <li 
+                key={todo.id} 
+                className={`${styles.todoItem} ${todo.completed ? styles.completed : ''}`}
+              >
                 <input
                   type="checkbox"
                   checked={todo.completed}
                   onChange={() => toggleTodo(todo.id)}
+                  className={styles.checkbox}
                 />
-                <span>{todo.text}</span>
-                <button onClick={() => deleteTodo(todo.id)}>삭제</button>
+                <span className={styles.todoText}>{todo.text}</span>
+                <button 
+                  onClick={() => deleteTodo(todo.id)}
+                  className={styles.deleteButton}
+                >
+                  삭제
+                </button>
               </li>
             ))}
           </ul>
         </div>
       </div>
-      <div className="navigation">
-        <Link to="/">메인으로 돌아가기</Link>
+      <div className={styles.navigation}>
+        <Link to="/" className={styles.navLink}>메인으로 돌아가기</Link>
       </div>
     </div>
   )

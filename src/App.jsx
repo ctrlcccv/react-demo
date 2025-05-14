@@ -15,7 +15,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>React 데모 예제 모음!</h1>
+      <h1>React 데모 예제 모음</h1>
       <div className="card">
         <h2>예제 목록</h2>
         <ul>

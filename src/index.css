@@ -1,111 +1,41 @@
-/* 글로벌 스타일 - 공통 스타일만 정의 */
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+* { 
+  margin: 0; 
+  padding: 0; 
+  font-family: 'Noto Sans KR', sans-serif; 
+  box-sizing: border-box; 
+} 
 
-  color-scheme: light dark;
-  color: #213547;
-  background-color: #ffffff;
+.blog { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  position: fixed; 
+  bottom: 50px; 
+  left: 50%; 
+  width: 160px; 
+  height: 46px; 
+  background-size: 300% 100%; 
+  border-radius: 23px; 
+  font-size: 16px; 
+  font-weight: 500; 
+  color: #fff; 
+  z-index: 100; 
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376); 
+  transform: translate(-50%, 0); 
+  text-decoration: none; 
+  transition: all .4s ease-in-out; 
+} 
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.blog:hover { 
+  background-position: 100% 0; 
+  box-shadow: 0 2px 8px 0 rgba(45, 54, 65, 0.65); 
+} 
+
+ul, li {
+  list-style: none;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-/* 앱 로고 스타일 */
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-/* 카드 컨테이너 */
-.card {
-  padding: 2em;
-}
-
-/* 링크 스타일 */
 a {
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-  text-decoration: underline;
-}
-
-/* 버튼 공통 스타일 */
-button {
-  cursor: pointer;
-}
-
-/* 기본 리스트 스타일 */
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
-  margin: 10px 0;
-}
-
-/* 기본 텍스트 스타일 */
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-.read-the-docs {
-  color: #888;
-  margin-top: 20px;
-}
-
-/* 다크 모드 대응 */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-  }
-  a {
-    color: #747bff;
-  }
-  a:hover {
-    color: #646cff;
-  }
-  .read-the-docs {
-    color: #ccc;
-  }
+  text-decoration: none;
+  color: inherit;
 }

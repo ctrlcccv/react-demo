@@ -8,35 +8,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.title {
-  color: #7952b3;
-  font-size: 2em;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.content {
-  padding: 20px;
-  background-color: white;
-  border-radius: 6px;
-  margin-bottom: 25px;
-}
-
-.sectionTitle {
-  color: #333;
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #eaeaea;
-  padding-bottom: 8px;
-}
-
-.description {
-  line-height: 1.6;
-  color: #444;
-  margin-bottom: 20px;
-}
-
-/* 전화번호 입력 폼 스타일 - code.md의 CSS 스타일 반영 */
+/* 전화번호 입력 폼 스타일 */
 .phoneForm {
   display: flex;
   flex-direction: column;
@@ -90,45 +62,4 @@
   border-radius: 4px;
   font-weight: 500;
   color: #333;
-}
-
-/* 코드 블록 스타일 */
-.codeBlock {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  border: 1px solid #eaeaea;
-  color: #444;
-}
-
-.codeBlock .sectionTitle {
-  margin-top: 0;
-  color: #333;
-  font-size: 1.2em;
-  border-bottom-color: #ddd;
-}
-
-.codeBlock .description {
-  font-size: 0.95em;
-  color: #555;
-}
-
-.navigation {
-  text-align: center;
-  margin-top: 25px;
-}
-
-.navLink {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #7952b3;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.navLink:hover {
-  background-color: #64459b;
 }

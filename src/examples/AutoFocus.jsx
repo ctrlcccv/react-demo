@@ -78,76 +78,56 @@ function AutoFocus() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>전화번호 입력 예제</h1>
-      <div className={styles.content}>
-        <h2 className={styles.sectionTitle}>입력 필드 자동 포커스 이동</h2>
-        <p className={styles.description}>
-          이 예제는 전화번호 입력 시 자동으로 다음 필드로 포커스가 이동하는 기능을 구현합니다.
-          jQuery 코드를 React의 useRef와 useEffect 훅을 사용하여 React 방식으로 변환했습니다.
-        </p>
-        
-        <div className={styles.phoneForm}>
-          <h2>전화번호 입력</h2>
-          <div className={styles.inputContainer}>
-            <input
-              type="tel"
-              ref={phone1Ref}
-              value={phone1}
-              onChange={(e) => handleInputChange(setPhone1, e.target.value, 0)}
-              onKeyDown={(e) => handleKeyDown(e, 0)}
-              maxLength={3}
-              className={styles.phoneInput}
-              placeholder="010"
-              inputMode="numeric"
-              pattern="[0-9]*"
-              aria-label="전화번호 앞자리"
-            />
-            <span className={styles.separator} aria-hidden="true">-</span>
-            <input
-              type="tel"
-              ref={phone2Ref}
-              value={phone2}
-              onChange={(e) => handleInputChange(setPhone2, e.target.value, 1)}
-              onKeyDown={(e) => handleKeyDown(e, 1)}
-              maxLength={4}
-              className={styles.phoneInput}
-              placeholder="0000"
-              inputMode="numeric"
-              pattern="[0-9]*"
-              aria-label="전화번호 중간자리"
-            />
-            <span className={styles.separator} aria-hidden="true">-</span>
-            <input
-              type="tel"
-              ref={phone3Ref}
-              value={phone3}
-              onChange={(e) => handleInputChange(setPhone3, e.target.value, 2)}
-              onKeyDown={(e) => handleKeyDown(e, 2)}
-              maxLength={4}
-              className={styles.phoneInput}
-              placeholder="0000"
-              inputMode="numeric"
-              pattern="[0-9]*"
-              aria-label="전화번호 뒷자리"
-            />
+      <div className={styles.phoneForm}>
+        <h2>전화번호 입력</h2>
+        <div className={styles.inputContainer}>
+          <input
+            type="tel"
+            ref={phone1Ref}
+            value={phone1}
+            onChange={(e) => handleInputChange(setPhone1, e.target.value, 0)}
+            onKeyDown={(e) => handleKeyDown(e, 0)}
+            maxLength={3}
+            className={styles.phoneInput}
+            placeholder="010"
+            inputMode="numeric"
+            pattern="[0-9]*"
+            aria-label="전화번호 앞자리"
+          />
+          <span className={styles.separator} aria-hidden="true">-</span>
+          <input
+            type="tel"
+            ref={phone2Ref}
+            value={phone2}
+            onChange={(e) => handleInputChange(setPhone2, e.target.value, 1)}
+            onKeyDown={(e) => handleKeyDown(e, 1)}
+            maxLength={4}
+            className={styles.phoneInput}
+            placeholder="0000"
+            inputMode="numeric"
+            pattern="[0-9]*"
+            aria-label="전화번호 중간자리"
+          />
+          <span className={styles.separator} aria-hidden="true">-</span>
+          <input
+            type="tel"
+            ref={phone3Ref}
+            value={phone3}
+            onChange={(e) => handleInputChange(setPhone3, e.target.value, 2)}
+            onKeyDown={(e) => handleKeyDown(e, 2)}
+            maxLength={4}
+            className={styles.phoneInput}
+            placeholder="0000"
+            inputMode="numeric"
+            pattern="[0-9]*"
+            aria-label="전화번호 뒷자리"
+          />
+        </div>
+        {phone1 && phone2 && phone3 && (
+          <div className={styles.result}>
+            입력된 전화번호: {phone1}-{phone2}-{phone3}
           </div>
-          {phone1 && phone2 && phone3 && (
-            <div className={styles.result}>
-              입력된 전화번호: {phone1}-{phone2}-{phone3}
-            </div>
-          )}
-        </div>
-        
-        <div className={styles.codeBlock}>
-          <h3 className={styles.sectionTitle}>jQuery에서 React로 변환된 코드</h3>
-          <p className={styles.description}>
-            기존 jQuery 코드는 입력 필드를 선택하고 이벤트를 설정하는 방식이었습니다.
-            React에서는 useState로 상태를 관리하고, useRef로 DOM 요소에 접근합니다.
-          </p>
-        </div>
-      </div>
-      <div className={styles.navigation}>
-        <Link to="/" className={styles.navLink}>메인으로 돌아가기</Link>
+        )}
       </div>
     </div>
   );

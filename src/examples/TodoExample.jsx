@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function TodoExample() {
   const [todos, setTodos] = useState([
@@ -72,7 +73,7 @@ function TodoExample() {
         </div>
       </div>
       <div className="navigation">
-        <a href="#">메인으로 돌아가기</a>
+        <Link to="/">메인으로 돌아가기</Link>
       </div>
     </div>
   )

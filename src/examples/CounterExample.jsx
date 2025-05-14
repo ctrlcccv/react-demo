@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function CounterExample() {
   const [count, setCount] = useState(0)
@@ -58,7 +59,7 @@ function Counter() {
         </div>
       </div>
       <div className="navigation">
-        <a href="#">메인으로 돌아가기</a>
+        <Link to="/">메인으로 돌아가기</Link>
       </div>
     </div>
   )

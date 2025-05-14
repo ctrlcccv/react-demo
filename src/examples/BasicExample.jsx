@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function BasicExample() {
   return (
@@ -29,7 +30,7 @@ function BasicExample() {
         </pre>
       </div>
       <div className="navigation">
-        <a href="#">메인으로 돌아가기</a>
+        <Link to="/">메인으로 돌아가기</Link>
       </div>
     </div>
   )
